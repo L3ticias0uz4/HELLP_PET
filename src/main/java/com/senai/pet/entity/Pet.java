@@ -17,15 +17,21 @@ import org.hibernate.annotations.AnyDiscriminatorImplicitValues;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Pet {
-    @Id @GeneratedValue (strategy = GenerationType.AUTO)
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
     private String nome;
     private int idade;
     private Porte porte;
     private Tipo tipo;
     private String raca;
-    public Pet()
 
-    public Pet(@NotBlank String nome, int idade, @NotBlank Porte porte, @NotBlank Tipo tipo, String raca) {
+    public Pet(String nome, int idade, Porte porte, Tipo tipo, String raca) {
+        this.nome = nome;
+        this.idade = idade;
+        this.porte = porte;
+        this.tipo = tipo;
+        this.raca = raca;
+
     }
 }

@@ -4,6 +4,7 @@ import com.senai.pet.entity.Pet;
 import com.senai.pet.enums.Porte;
 import com.senai.pet.enums.Tipo;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -17,9 +18,9 @@ public class PetDTO {
     @NotBlank
     private String nome;
     private int idade;
-    @NotBlank
+    @NotNull
     private Porte porte;
-    @NotBlank
+    @NotNull
     private Tipo tipo;
     private String raca;
 
